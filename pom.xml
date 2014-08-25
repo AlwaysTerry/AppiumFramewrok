@@ -29,7 +29,7 @@
                 <configuration>
                  <includes>
                      <include>calculator/TestCalculator.java</include>
-                     <include>TestModule2/TestMessages.java</include>
+                     <include>messages/TestMessages.java</include>
                  </includes>
 <!--                  <sureXmlFiles> -->
 <!--                      <sureXmlFile> -->
