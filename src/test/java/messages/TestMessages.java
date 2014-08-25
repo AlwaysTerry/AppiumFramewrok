@@ -11,6 +11,9 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import util.Do;
+
 import java.io.File;
 import java.net.URL;
 import java.util.List;
@@ -18,20 +21,24 @@ import java.util.List;
 
 public class TestMessages {
     private WebDriver driver;
-
+    private Do du;
+    
     @BeforeMethod
     public void setUp() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("deviceName","Samsung");    
-        driver = new RemoteWebDriver(new URL("http://172.28.57.49:4723/wd/hub"), capabilities);      
+        driver = new RemoteWebDriver(new URL("http://172.28.57.49:4723/wd/hub"), capabilities);    
+        du = new Do(driver);
     }
 
 
     @Test
     public void testMessages(){ 
+    	du.getElementByName("To").sendKeys("12345678910");
+    	du.getElementByName("Type message").sendKeys("test by Terry");
+    	du.getElementById("com.android.mms:id/send_button_sms").click();
     	
- 
     }
 
 
