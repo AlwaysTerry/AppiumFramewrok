@@ -27,7 +27,13 @@ public class TestMessages {
     public void setUp() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("deviceName","Samsung");    
+        capabilities.setCapability("deviceName","Samsung");
+        
+        
+        capabilities.setCapability("androidPackage", "com.android.mms");
+        capabilities.setCapability("appActivity", "com.android.mms.ui.ComposeMessageActivity");
+        
+        
         driver = new RemoteWebDriver(new URL("http://172.28.57.49:4723/wd/hub"), capabilities);    
         du = new Do(driver);
     }
