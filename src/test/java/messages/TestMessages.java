@@ -37,8 +37,7 @@ public class TestMessages {
     public void testMessages(){ 
     	du.getElementByName("To").sendKeys("12345678910");
     	du.getElementByName("Type message").sendKeys("test by Terry");
-    	du.getElementById("com.android.mms:id/send_button_sms").click();
-    	
+    	du.getElementById("com.android.mms:id/send_button_sms").click();    	
     }
 
 
