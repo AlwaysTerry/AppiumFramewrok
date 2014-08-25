@@ -23,7 +23,12 @@ public class TestCalculator {
     public void setUp() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("deviceName","Samsung");    
+        capabilities.setCapability("deviceName","Samsung");
+        
+        //package&activity
+        capabilities.setCapability("androidPackage", "com.android.calculator2");
+        capabilities.setCapability("appActivity", "com.android.calculator2.Calculator");
+        
         driver = new RemoteWebDriver(new URL("http://172.28.57.49:4723/wd/hub"), capabilities);      
     }
 
