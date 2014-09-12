@@ -26,10 +26,10 @@ public class TestCalculator {
         capabilities.setCapability("deviceName","Samsung");
         
         //package&activity
-        capabilities.setCapability("androidPackage", "com.android.calculator2");
+       capabilities.setCapability("androidPackage", "com.android.calculator2");
         capabilities.setCapability("appActivity", "com.android.calculator2.Calculator");
         
-        driver = new RemoteWebDriver(new URL("http://172.28.57.49:4723/wd/hub"), capabilities);      
+        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);      
     }
 
 
