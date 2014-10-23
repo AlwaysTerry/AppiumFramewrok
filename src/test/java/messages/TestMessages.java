@@ -34,7 +34,7 @@ public class TestMessages {
         capabilities.setCapability("appActivity", "com.android.mms.ui.ComposeMessageActivity");
         
         
-        driver = new RemoteWebDriver(new URL("http://172.28.57.49:4723/wd/hub"), capabilities);    
+        driver = new RemoteWebDriver(new URL("http://10.69.1.203:4723:4723/wd/hub"), capabilities);    
         du = new Do(driver);
     }
 
